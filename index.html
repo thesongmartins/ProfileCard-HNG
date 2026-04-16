@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Song Martins — Profile Card. Frontend Engineer & Mobile Engineer portfolio."
+    />
+    <meta name="author" content="Song Martins" />
+    <title>Song Martins | Profile Card</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="fade-up">
+      <article
+        class="profile-card"
+        id="profile-card"
+        data-testid="test-profile-card"
+      >
+        <div class="accent-bar" aria-hidden="true"></div>
+
+        <div class="card-content">
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <figure class="avatar-container">
+              <div class="avatar">
+                <img
+                  id="user-avatar"
+                  src=""
+                  alt="Portrait of Song Martins"
+                  data-testid="test-user-avatar"
+                />
+              </div>
+              <button
+                type="button"
+                id="upload-btn"
+                class="upload-btn"
+                aria-label="Change profile photo"
+                title="Upload your photo"
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8 1a1 1 0 011 1v5h5a1 1 0 110 2H9v5a1 1 0 11-2 0V9H2a1 1 0 010-2h5V2a1 1 0 011-1z"
+                  />
+                </svg>
+              </button>
+              <input
+                type="file"
+                id="avatar-input"
+                accept="image/*"
+                class="sr-only"
+                aria-label="Upload profile photo file"
+              />
+            </figure>
+
+            <div
+              class="clock-container"
+              data-testid="test-user-time"
+              aria-live="polite"
+            >
+              <span class="clock-dot pulse-soft" aria-hidden="true"></span>
+              <span id="clock-ms" class="clock-text">0 ms</span>
+            </div>
+
+            <nav class="social-nav" aria-label="Social media profiles">
+              <span>Find me on</span>
+              <ul id="social-links" class="social-list" role="list">
+                <!-- Rendered via JS -->
+              </ul>
+            </nav>
+          </aside>
+
+          <!-- Main Panel -->
+          <div class="main-panel">
+            <header>
+              <div id="user-title" class="job-title"></div>
+              <h1 id="user-name" data-testid="test-user-name"></h1>
+              <div id="skill-tags" class="tag-container" aria-label="Skills">
+                <!-- Rendered via JS -->
+              </div>
+            </header>
+
+            <section aria-labelledby="bio-heading">
+              <h2 id="bio-heading" class="section-title">About</h2>
+              <p id="user-bio" class="bio-text" data-testid="test-user-bio"></p>
+            </section>
+
+            <div class="list-grid">
+              <section aria-labelledby="hobbies-heading">
+                <h3 id="hobbies-heading" class="section-title">Hobbies</h3>
+                <ul
+                  id="hobbies-list"
+                  data-testid="test-user-hobbies"
+                  role="list"
+                >
+                  <!-- Rendered via JS -->
+                </ul>
+              </section>
+
+              <section aria-labelledby="dislikes-heading">
+                <h3 id="dislikes-heading" class="section-title">Dislikes</h3>
+                <ul
+                  id="dislikes-list"
+                  data-testid="test-user-dislikes"
+                  role="list"
+                >
+                  <!-- Rendered via JS -->
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <span class="footer-left">Profile Card · HNG Internship</span>
+          <span class="footer-right"
+            >© <span id="copyright-year"></span> Song Martins</span
+          >
+        </footer>
+      </article>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
